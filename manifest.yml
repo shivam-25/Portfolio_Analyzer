@@ -1,0 +1,14 @@
+declared-services:
+  aip-investment-portfolio:
+    label: fss-portfolio-service
+    plan: fss-portfolio-service-free-plan
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  name: Portfolio-Analyze
+  disk_quota: 1024M
+  domain: mybluemix.net
+  services:
+  - aip-investment-portfolio
+  buildpack: python_buildpack
